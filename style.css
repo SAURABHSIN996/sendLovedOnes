@@ -115,19 +115,21 @@
   
   /* Mobile-specific adjustments */
   @media screen and (max-width: 768px) {
-    header h1 {
-      font-size: 1.8rem; /* Smaller font size for mobile */
+    .button-container {
+      display: flex;
+      flex-direction: column;  /* Stack buttons vertically */
+      align-items: center;
+      justify-content: center;
+    }
+  
+    button {
+      margin: 1rem 0;  /* Add vertical space between buttons */
+      width: 80%;  /* Make buttons wider on mobile for easier clicking */
+      max-width: 300px;  /* Limit the button width */
     }
   
     .gif-container {
       max-width: 300px; /* Shrink gif for smaller screens */
-    }
-  
-    button {
-      padding: 0.6rem 1rem;
-      font-size: 1rem;
-      margin: 0 0.3rem; /* Smaller margins for buttons */
-      max-width: 120px; /* Make buttons smaller on mobile */
     }
   
     .button-container {
