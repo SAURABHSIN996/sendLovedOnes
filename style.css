@@ -5,8 +5,8 @@
     box-sizing: border-box;
   }
   
-  /* Radial gradient background */
-  body {
+/* Radial gradient background */
+body {
     height: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: rgb(238,174,202);
@@ -17,53 +17,53 @@
     text-align: center;
     flex-direction: column;
     padding: 1rem;
-  }
+}
   
-  header {
+header {
     background-color: rgba(0, 0, 0, 0.6);
     padding: 0.8rem;
     border-radius: 10px;
     margin-bottom: 2rem;
     width: 100%;
-    max-width: 600px; /* Restrict max width for large screens */
-  }
-  
-  header h1 {
+    max-width: 400px; /* Restrict max width for large screens */
+}
+
+header h1 {
     color: #fff;
-    font-size: 2.5rem;
-    font-weight: 700;
+    font-size: 2rem;
+    font-weight: 600;
     text-shadow: 2px 2px 5px #000;
-  }
-  
-  main {
+}
+
+main {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100%;
     width: 100%;
-  }
-  
-  .gif-container {
+}
+
+.gif-container {
     margin-bottom: 1rem;
-    width: 100%;
+    width: 50%;
     max-width: 400px; /* Ensure image doesn't get too large on big screens */
-  }
-  
-  .gif-container img {
+}
+
+.gif-container img {
     width: 50%;
     height: auto;
     border-radius: 10px;
-  }
-  
-  .button-container {
+}
+
+.button-container {
     display: flex;
     justify-content: center;
     margin-top: 1rem;
     width: 100%;
-  }
-  
-  button {
+}
+
+button {
     flex: 1; /* Make buttons take equal width */
     padding: 0.8rem 1.5rem;
     margin: 0 0.5rem;
@@ -75,70 +75,64 @@
     font-size: 1.1rem;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
     max-width: 150px; /* Max button size on larger screens */
-  }
-  
-  button:hover {
+}
+
+button:hover {
     transform: scale(1.1);
-  }
-  
-  #no-button {
+}
+
+#no-button {
     background-color: #d96363;
     color: #fff;
-  }
-  
-  #no-button:hover {
+}
+
+#no-button:hover {
     background-color: #c0392b;
     animation: shake 0.5s infinite;
-  }
-  
-  @keyframes shake {
+}
+
+@keyframes shake {
     0% { transform: translate(0, 0); }
     25% { transform: translate(-5px, 0); }
     50% { transform: translate(0, -5px); }
     75% { transform: translate(5px, 0); }
     100% { transform: translate(0, 0); }
-  }
-  
-  #yes-button {
+}
+
+#yes-button {
     background-color: #56c484;
     color: #fff;
-  }
-  
-  #yes-button:hover {
+}
+
+#yes-button:hover {
     background-color: #27ae60;
-  }
-  
-  #confetti-canvas {
-    width: 0;
-    height: 0;
-  }
-  
-  /* Mobile-specific adjustments */
-  @media screen and (max-width: 768px) {
+}
+
+/* Mobile-specific adjustments */
+@media screen and (max-width: 768px) {
     .button-container {
-      display: flex;
       flex-direction: column;  /* Stack buttons vertically */
       align-items: center;
       justify-content: center;
+      margin-top: 2rem;  /* Increase space above buttons */
     }
-  
+
     button {
       margin: 1rem 0;  /* Add vertical space between buttons */
       width: 80%;  /* Make buttons wider on mobile for easier clicking */
       max-width: 300px;  /* Limit the button width */
     }
-  
+
     .gif-container {
       max-width: 300px; /* Shrink gif for smaller screens */
     }
-  
+
     .button-container {
       flex-direction: column;
       align-items: center;
     }
-  
+
     button {
-      margin-bottom: 0.5rem; /* Vertical spacing between buttons on mobile */
+      margin-bottom: 1.5rem; /* More vertical spacing between buttons on mobile */
     }
-  }
-  
+}
