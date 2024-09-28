@@ -1,0 +1,142 @@
+/* General resets and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Radial gradient background */
+  body {
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 1rem;
+  }
+  
+  header {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 0.8rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    width: 100%;
+    max-width: 600px; /* Restrict max width for large screens */
+  }
+  
+  header h1 {
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 5px #000;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .gif-container {
+    margin-bottom: 1rem;
+    width: 100%;
+    max-width: 400px; /* Ensure image doesn't get too large on big screens */
+  }
+  
+  .gif-container img {
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    width: 100%;
+  }
+  
+  button {
+    flex: 1; /* Make buttons take equal width */
+    padding: 0.8rem 1.5rem;
+    margin: 0 0.5rem;
+    border-radius: 30px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+    font-size: 1.1rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    max-width: 150px; /* Max button size on larger screens */
+  }
+  
+  button:hover {
+    transform: scale(1.1);
+  }
+  
+  #no-button {
+    background-color: #d96363;
+    color: #fff;
+  }
+  
+  #no-button:hover {
+    background-color: #c0392b;
+    animation: shake 0.5s infinite;
+  }
+  
+  @keyframes shake {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(-5px, 0); }
+    50% { transform: translate(0, -5px); }
+    75% { transform: translate(5px, 0); }
+    100% { transform: translate(0, 0); }
+  }
+  
+  #yes-button {
+    background-color: #56c484;
+    color: #fff;
+  }
+  
+  #yes-button:hover {
+    background-color: #27ae60;
+  }
+  
+  #confetti-canvas {
+    width: 0;
+    height: 0;
+  }
+  
+  /* Mobile-specific adjustments */
+  @media screen and (max-width: 768px) {
+    header h1 {
+      font-size: 1.8rem; /* Smaller font size for mobile */
+    }
+  
+    .gif-container {
+      max-width: 300px; /* Shrink gif for smaller screens */
+    }
+  
+    button {
+      padding: 0.6rem 1rem;
+      font-size: 1rem;
+      margin: 0 0.3rem; /* Smaller margins for buttons */
+      max-width: 120px; /* Make buttons smaller on mobile */
+    }
+  
+    .button-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    button {
+      margin-bottom: 0.5rem; /* Vertical spacing between buttons on mobile */
+    }
+  }
+  
