@@ -1,8 +1,8 @@
 // Get the "No" button element
 const noButton = document.getElementById("no-button");
 
-// Add a mouseover event listener to move the "No" button randomly
-noButton.addEventListener("mouseover", () => {
+// Add a click event listener to move the "No" button randomly on click
+noButton.addEventListener("click", () => {
   const x = Math.floor(Math.random() * window.innerWidth);
   const y = Math.floor(Math.random() * window.innerHeight);
 
@@ -19,6 +19,7 @@ noButton.addEventListener("mouseover", () => {
   noButton.style.left = `${adjustedX}px`;
   noButton.style.top = `${adjustedY}px`;
 });
+
 
 // Get the "Yes" button element
 const yesButton = document.getElementById("yes-button");
